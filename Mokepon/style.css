@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+html {
+    background: url(assets/fondo.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: 'Cinzel', serif;   
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    color: #ffffff; 
+    font-size: 65px;  
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-shadow: 2px 2px 4px wheat;
+}
+
+.subtitulo {
+    display: flex;
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px wheat;
+}
+
+.tarjetas{ 
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 180px 180px;
+    
+
+}
+
+.tarjeta-de-mokepon{
+    width: 190px;
+    height: 85px;
+    background: #f5f77e;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    border: 1px groove #6cff03;
+    font-size: 18px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon img{
+    width: 60px;
+}
+
+input{
+    display: none;
+}
+input:checked+label{
+    font-size: 22px;
+    color: whitesmoke;
+    background-color: #0eaf03;
+}
+input:hover+label{
+    font-size: 22px;
+    color: black;
+    background-color: #ffffff;
+}
+
+#boton-seleccion:hover {
+    font-size: 20px;
+    color: black;
+    background-color: #ffffff;
+}
+
+#boton-seleccion {
+    display: flex;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: #f5f77e;
+    border: 1px groove #0eaf03;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+#seleccionar-ataque {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque{
+    background-color: #f5f77e;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: transparent;
+    color: #935b00;
+    font-family: 'Cinzel', serif;
+
+}
+
+.boton-de-ataque:hover {
+    font-size: 12px;
+    color: black;
+    background-color: #ffffff;
+}
+
+#mensajes {
+    width: 280px;
+    background-color: #f5f77e;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #935b00;
+    font-family: 'Cinzel', serif;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: center;
+}
+#info1, #info2 {
+
+    background-color: #f5f77e;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#movimientos {
+    flex-direction: row;
+}
+
+#boton-movimientos {
+
+    width: 75px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #f5f77e;
+    border: 1px groove #0eaf03;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+#boton-movimientos:hover {
+
+    width: 75px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #0eaf03;
+    border: 1px groove #f5f77e;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+
+
+
+@media (max-width: 412px){
+ 
+    html {
+        background: url(assets/fondo.jpg);
+        background-size: unset;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #responsive-tarjetas {
+        display: grid;
+        grid-template-columns: 150px 150px;
+    }
+
+    .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff; 
+        font-size: 42px;  
+        margin-bottom: 5px;
+        text-shadow: 2px 2px 4px wheat;
+    }
+    
+    .subtitulo {
+        display: flex;
+        color: #ffffff;
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 12px;
+        text-shadow: 1px 1px 2px wheat;
+    }
+
+    #mensajes {
+        width: 180px;
+        background-color: #f5f77e;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tarjeta-de-mokepon{
+        display: grid;
+        width: 125px;
+        height: 10px;
+        margin-bottom: 18px;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 40% 40% 40%;  
+        font-size: 12px;
+    }
+    .tarjetas {
+        display: grid;
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    #boton-seleccion {
+        width: 125px;
+        height: 30px;
+        font-size: 12px;
+        display: flex;
+        background-color: #f5f77e;
+        align-items: center;
+        justify-content: center;
+        border: 1px groove #0eaf03;
+        margin-top: 30px;
+        border-radius: 10px;
+        font-family: 'Cinzel', serif;
+    }
+
+    input:checked+label{
+        font-size: 14px;
+        color: whitesmoke;
+        background-color: #0eaf03;
+    }
+
+} /*Primer Media quierry*/
+
