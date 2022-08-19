@@ -1,14 +1,27 @@
 const express = require("express")
+const cors = require("cors")
+
+const app = express()
+
+app.use(cors())
+app.use(express.json())
+
+const ObjJugadores = []
 
 class Jugador{
     constructor(id){
         this.id = id
     }
+    asignarMokepon(mokepon){
+        this.mokepon = mokepon
+    }
 }
 
-const app = express()
-
-const ObjJugadores = []
+class Mokepon {
+    constructor(nombre){
+        this.nombre = nombre
+    }
+}
 
 app.get("/unirse", (req,res) => {
     const id = `${Math.random()}`
@@ -17,9 +30,23 @@ app.get("/unirse", (req,res) => {
 
     ObjJugadores.push(varjugador)
 
-    res.setHeader("Access-Control-Allow-Origin", "*")
+  //  res.setHeader("Access-Control-Allow-Origin", "*")
     
     res.send(id)
+})
+
+app.post("/mokepon/:jugadorId", (req,res) =>{
+    const jugadorId = req.params.jugadorId || ""
+    const nombre = req.body.mokepon || ""
+    const mokepon = new Mokepon(nombre)
+
+    const jugadorIndex = ObjJugadores.findIndex((varjugador) => jugadorId === varjugador.id)
+
+    jugadorIndex>=0 ? ObjJugadores[jugadorIndex].asignarMokepon(mokepon) : 
+
+    console.log(ObjJugadores);
+    console.log(jugadorId);
+    res.end()
 })
 
 app.listen(8080, () =>{

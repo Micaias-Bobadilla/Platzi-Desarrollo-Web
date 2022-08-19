@@ -22,7 +22,7 @@ const botonesAtaque = document.getElementById("ataques-botones")
 const sectionMapa = document.getElementById("ver-mapa")
 const mapa = document.getElementById("mapa")
 
-
+let jugadorId = null
 let mokepones = [] //arreglo
 let ataqueJugador = []
 let ataqueEnemigo = [] //variable global
@@ -222,7 +222,7 @@ function iniciarJuego(){
     botonReiniciar.style.display = "none"
 
     unirseAlJuego()
-
+ 
 }
 
 function unirseAlJuego(){
@@ -232,6 +232,7 @@ function unirseAlJuego(){
                 res.text()
                     .then( function (respuesta) {
                         console.log(respuesta);
+                        jugadorId = respuesta
                     })
             }
         })
@@ -264,9 +265,8 @@ function seleccionarMascotaJugador(){
      }else{
          seleccionado=false
          location.reload();
-         
      }
- 
+ seleccionarMokepon(mascotaJugador)
      if(seleccionado==true){
         extraerAtaques(mascotaJugador)
         sectionMapa.style.display = "flex" 
@@ -274,6 +274,18 @@ function seleccionarMascotaJugador(){
      }
     
     
+}
+
+function seleccionarMokepon(mascotaJugador){
+    fetch(`http://localhost:8080/mokepon/${jugadorId}`, {
+        method: "post",
+        Headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            mokepon: mascotaJugador
+        })
+    })
 }
 
 function extraerAtaques(mascotaJugador) {
