@@ -480,6 +480,7 @@ function pintarCanvas(){
     mascotaJugadorObjeto.pintarMokepon();
 
     enviarPosicion(mascotaJugadorObjeto.x,mascotaJugadorObjeto.y)
+    
     mokeponesEnemigos.forEach( function (mokepon){
         mokepon.pintarMokepon()
         revisarColision(mokepon)
@@ -500,10 +501,11 @@ function enviarPosicion(x,y){
         .then(function(res){
             if (res.ok){
                 res.json()
-                    .then(function ({enemigos}){
-                        mokeponEnemigo = null
+                    .then(function ({ enemigos }){
+                       
                         mokeponesEnemigos=enemigos.map(function (enemigo){
-                        const mokeponNombre =enemigo.mokepon.id || ""
+                            let mokeponEnemigo = null
+                        const mokeponNombre = enemigo.mokepon.nombre || "Hipodoge"
                             if (mokeponNombre === "Hipodoge"){
                                 mokeponEnemigo = new Mokepon("Hipodoge", './assets/poke1Enemi.png', 3,enemigo.id)
                             } else if (mokeponNombre === "Capipepo"){
