@@ -74,7 +74,7 @@ app.post("/mokepon/:jugadorId/posicion", (req,res) => {
     })
 })
 
-app.post("/mokepon/:jugadorId/ataques", (req,res) =>{ //Endpoint donde recibimo el nombre del mokepon seleccionado
+app.post("/mokepon/:jugadorId/ataques", (req,res) =>{ //Endpoint donde recibimos
     const jugadorId = req.params.jugadorId || ""
     const ataques = req.body.ataques || []
     
