@@ -238,6 +238,7 @@ function seleccionarMascotaJugador(){
          mascotaJugador = pydos.id
      }else{
          seleccionado=false
+         alert("Mira no seleccionaste")
          location.reload();
      }
  
