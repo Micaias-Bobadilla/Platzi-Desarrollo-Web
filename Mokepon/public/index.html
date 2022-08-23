@@ -19,10 +19,16 @@
     <h1 class="subtitulo" >Recorre el mapa con tu mokepon</h1>
     <canvas id="mapa"></canvas>
     <div id="movimientos">
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart ="moverIzquierda()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" >Izquierda</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverArriba()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverAbajo()"
+        onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverDerecha()"
+        onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
     </div>
 </section>
       <section id="seleccionar-ataque">
