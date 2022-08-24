@@ -102,12 +102,6 @@ let lasgostelvis = new Mokepon("Lasgostelvis", './assets/poke4.png', 3)
 let tucapalma = new Mokepon("Tucapalma", './assets/poke5.png', 3)
 let Pydos = new Mokepon("Pydos", './assets/poke6.png', 3)
 
-// let hipodogeEnemigo = new Mokepon("Hipodoge", './assets/poke1Enemi.png', 3,)
-// let capipepoEnemigo = new Mokepon("Capipepo", './assets/poke2Enemi.png', 35)
-// let ratigueyaEnemigo = new Mokepon("Ratigueya", './assets/poke3Enemi.png', 3)
-// let lasgostelvisEnemigo = new Mokepon("Lasgostelvis", './assets/poke4Enemi.png', 3)
-// let tucapalmaEnemigo = new Mokepon("Tucapalma", './assets/poke5Enemi.png', 3)
-// let PydosEnemigo = new Mokepon("Pydos", './assets/poke6Enemi.png', 3)
 
 const HIPODOGE_ATAQ = [
     {nombre: "💧", id: "boton-agua"},
@@ -159,13 +153,6 @@ lasgostelvis.ataques.push(...LASGOSTELVIS_ATAQ)
 tucapalma.ataques.push(...TUCAPALMA_ATAQ)
 Pydos.ataques.push(...PYDOS_ATAQ)
 
-// hipodogeEnemigo.ataques.push(...HIPODOGE_ATAQ)
-// capipepoEnemigo.ataques.push(...CAPIPEPO_ATAQ)
-// ratigueyaEnemigo.ataques.push(...RATIGUEYA_ATAQ)
-// lasgostelvisEnemigo.ataques.push(...LASGOSTELVIS_ATAQ)
-// tucapalmaEnemigo.ataques.push(...TUCAPALMA_ATAQ)
-// PydosEnemigo.ataques.push(...PYDOS_ATAQ)
-
 
 mokepones.push(hipodoge,capipepo,ratigueya,lasgostelvis,tucapalma,Pydos)
 
@@ -191,7 +178,6 @@ function iniciarJuego(){
         tuca = document.getElementById("Tucapalma")
         pydos = document.getElementById("Pydos")
     })
-    
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador) //escuchadores de seleccion de mokepones
    
     botonReiniciar.addEventListener("click", reiniciarJuego)
@@ -591,7 +577,7 @@ function sepresionoUnaTecla(event){
 function iniciarMapa (){
   
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
-    intervalo = setInterval(pintarCanvas, 50)
+    intervalo = setInterval(pintarCanvas, 30)
 
     window.addEventListener("keydown", sepresionoUnaTecla)
     window.addEventListener("keyup", detenerMovimiento)
