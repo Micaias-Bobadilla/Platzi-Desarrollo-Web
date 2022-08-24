@@ -50,7 +50,7 @@ let cantVictoriasEnemigo=0
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapaBackground = new Image();
-mapaBackground.src = '/Mokepon/assets/mokemapa.jpg'
+mapaBackground.src = './assets/mokemapa.jpg'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
 const anchoMaximoDelMapa = 640
