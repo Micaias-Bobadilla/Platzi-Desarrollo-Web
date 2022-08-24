@@ -74,7 +74,11 @@ app.post("/mokepon/:jugadorId/posicion", (req,res) => {
     })
 })
 
+<<<<<<< HEAD
 app.post("/mokepon/:jugadorId/ataques", (req,res) =>{ //Endpoint donde recibimo el ataque
+=======
+app.post("/mokepon/:jugadorId/ataques", (req,res) =>{ //Endpoint donde recibimos
+>>>>>>> 13910f9c195d8cd2b0e3aba36b38d765f380b72b
     const jugadorId = req.params.jugadorId || ""
     const ataques = req.body.ataques || []
     

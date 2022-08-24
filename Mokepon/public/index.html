@@ -19,22 +19,24 @@
     <h1 class="subtitulo" >Recorre el mapa con tu mokepon</h1>
     <canvas id="mapa"></canvas>
     <div id="movimientos">
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
-        <button id="boton-movimientos" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart ="moverIzquierda()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" >Izquierda</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverArriba()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverAbajo()"
+        onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+        <button id="boton-movimientos" 
+        ontouchend="detenerMovimiento()" ontouchstart="moverDerecha()"
+        onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
     </div>
-    
-
 </section>
-
       <section id="seleccionar-ataque">
             <h1 class="titulo" >Mokepon!</h1>
             <h2 class="subtitulo">Elige tu ataque:</h2>
             <div id="ataques-botones" class="tarjetas-ataques" ></div>                            
                 <div id="mensajes">
                     <p id="resultado"> Mucha suerte</p>
-
                     <section id="reiniciar">
                         <button id="boton-reiniciar" >Volver a jugar</button>        
                     </section>

@@ -50,7 +50,12 @@ let cantVictoriasEnemigo=0
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapaBackground = new Image();
+<<<<<<< HEAD
 mapaBackground.src = './assets/mokemapa.jpg'
+=======
+//mapaBackground.src = '/Mokepon/assets/mokemapa.jpg' aca 
+mapaBackground.src = '/assets/mokemapa.jpg'
+>>>>>>> 13910f9c195d8cd2b0e3aba36b38d765f380b72b
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
 const anchoMaximoDelMapa = 640
@@ -200,7 +205,7 @@ function iniciarJuego(){
 }
 
 function unirseAlJuego(){
-    fetch("http://localhost:8080/unirse")
+    fetch("http://192.168.104.203:8080/unirse")
         .then(function (res) {
             if (res.ok) {   
                 res.text()
@@ -248,13 +253,11 @@ function seleccionarMascotaJugador(){
         sectionMapa.style.display = "flex" 
         iniciarMapa();         
      }
-     
- 
     
 }
 
 function seleccionarMokepon(mascotaJugador){
-    fetch(`http://localhost:8080/mokepon/${jugadorId}`, {
+    fetch(`http://192.168.104.203:8080/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -321,7 +324,7 @@ function secuenciaAtaque(){
 }
 
 function enviarAtaques() {
-    fetch(`http://localhost:8080/mokepon/${jugadorId}/ataques`,{
+    fetch(`http://192.168.104.203:8080/mokepon/${jugadorId}/ataques`,{
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -335,7 +338,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://localhost:8080/mokepon/${enemigoId}/ataques`)
+    fetch(`http://192.168.104.203:8080/mokepon/${enemigoId}/ataques`)
         .then(function (res){
             if(res.ok){
                 res.json()
@@ -489,7 +492,7 @@ function pintarCanvas(){
 }
 
 function enviarPosicion(x,y){
-    fetch(`http://localhost:8080/mokepon/${jugadorId}/posicion`, {
+    fetch(`http://192.168.104.203:8080/mokepon/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -529,6 +532,7 @@ function enviarPosicion(x,y){
             }
         })
 }
+
 function moverDerecha(){
     mascotaJugadorObjeto.velocidadX = 5
 }
