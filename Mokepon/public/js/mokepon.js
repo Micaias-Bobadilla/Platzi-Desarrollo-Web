@@ -52,7 +52,7 @@ let intervalo
 let mapaBackground = new Image();
 mapaBackground.src = './assets/mokemapa.jpg'
 //mapaBackground.src = '/Mokepon/assets/mokemapa.jpg' aca 
-mapaBackground.src = '/assets/mokemapa.jpg'
+//mapaBackground.src = '/assets/mokemapa.jpg'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
 const anchoMaximoDelMapa = 640
